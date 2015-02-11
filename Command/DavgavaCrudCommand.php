@@ -1,9 +1,9 @@
 <?php
 
-namespace MWSimple\Bundle\CrudGeneratorBundle\Command;
+namespace Davgava\Bundle\CrudGeneratorBundle\Command;
 
 use Sensio\Bundle\GeneratorBundle\Command\GenerateDoctrineCrudCommand;
-use MWSimple\Bundle\CrudGeneratorBundle\Generator\MWSimpleCrudGenerator;
+use Davgava\Bundle\CrudGeneratorBundle\Generator\DavgavaCrudGenerator;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 
 /**
@@ -11,19 +11,19 @@ use Symfony\Component\HttpKernel\Bundle\BundleInterface;
  *
  * @author Gonzalo Alonso <gonkpo@gmail.com>
  */
-class MWSimpleCrudCommand extends GenerateDoctrineCrudCommand
+class DavgavaCrudCommand extends GenerateDoctrineCrudCommand
 {
     protected function configure()
     {
         parent::configure();
 
-        $this->setName('mwsimple:generate:crud');
+        $this->setName('davgava:generate:crud');
         $this->setDescription('Generates a CRUD and paginator based on a Doctrine entity');
     }
 
     protected function createGenerator($bundle = null)
     {
-        return new MWSimpleCrudGenerator($this->getContainer()->get('filesystem'));
+        return new DavgavaCrudGenerator($this->getContainer()->get('filesystem'));
     }
 
     protected function getSkeletonDirs(BundleInterface $bundle = null)

@@ -47,13 +47,13 @@
      */
     private function createDeleteForm($id)
     {
-        {{ "$mensaje = $this->get('translator')->trans('views.recordactions.confirm', array(), 'MWSimpleCrudGeneratorBundle');" }}
+        {{ "$mensaje = $this->get('translator')->trans('views.recordactions.confirm', array(), 'DavgavaCrudGeneratorBundle');" }}
         $onclick = 'return confirm("'.$mensaje.'");';
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('{{ route_name_prefix }}_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array(
-                'translation_domain' => 'MWSimpleCrudGeneratorBundle',
+                'translation_domain' => 'DavgavaCrudGeneratorBundle',
                 'label'              => 'views.recordactions.delete',
                 'attr'               => array(
                     'class'   => 'btn btn-danger col-lg-11',

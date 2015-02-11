@@ -13,7 +13,7 @@ Add following lines to your `composer.json` file:
 ```json
 "require": {
     ...
-    "mwsimple/crud-generator": "v2.3.9"
+    "davgava/crud-generator": "v2.3.9"
 }
 ```
 ### Symfony > 2.3.6 + Include Boostrap 2
@@ -21,7 +21,7 @@ Add following lines to your `composer.json` file:
 ```json
 "require": {
 	...
-	"mwsimple/crud-generator": "dev-2.3-bootstrap2"
+	"davgava/crud-generator": "dev-2.3-bootstrap2"
 }
 ```
 ### Symfony 2.3.3
@@ -29,7 +29,7 @@ Add following lines to your `composer.json` file:
 ```json
 "require": {
 	...
-	"mwsimple/crud-generator": "v2.3.3"
+	"davgava/crud-generator": "v2.3.3"
 }
 ```
 ### Symfony 2.3.1 - 2.3.2
@@ -37,21 +37,21 @@ Add following lines to your `composer.json` file:
 ```json
 "require": {
 	...
-	"mwsimple/crud-generator": "v2.3.2"
+	"davgava/crud-generator": "v2.3.2"
 }
 ```
 
 Execute:
 
 ```cli
-php composer.phar update "mwsimple/crud-generator"
+php composer.phar update "davgava/crud-generator"
 ```
 
 Add it to the `AppKernel.php` class:
 
 ```php
 	// ...
-	new MWSimple\Bundle\CrudGeneratorBundle\MWSimpleCrudGeneratorBundle(),
+	new Davgava\Bundle\CrudGeneratorBundle\DavgavaCrudGeneratorBundle(),
 	new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 	new Lexik\Bundle\FormFilterBundle\LexikFormFilterBundle(),
 ```
@@ -110,7 +110,7 @@ This bundle extends [SensioGeneratorBundle](https://github.com/sensio/SensioGene
 Use following command from console:
 
 ```cli
-app/console mwsimple:generate:crud
+app/console davgava:generate:crud
 ```
 
 ## Author

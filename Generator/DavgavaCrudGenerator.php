@@ -1,6 +1,6 @@
 <?php
 
-namespace MWSimple\Bundle\CrudGeneratorBundle\Generator;
+namespace Davgava\Bundle\CrudGeneratorBundle\Generator;
 
 use Sensio\Bundle\GeneratorBundle\Generator\DoctrineCrudGenerator;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping\ClassMetadataInfo;
  *
  * @author Gonzalo Alonso <gonkpo@gmail.com>
  */
-class MWSimpleCrudGenerator extends DoctrineCrudGenerator
+class DavgavaCrudGenerator extends DoctrineCrudGenerator
 {
     public function generate(BundleInterface $bundle, $entity, ClassMetadataInfo $metadata, $format, $routePrefix, $needWriteActions, $forceOverwrite)
     {

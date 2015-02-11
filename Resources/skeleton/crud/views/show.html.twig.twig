@@ -1,10 +1,10 @@
 {% block extends %}
-{{ "{% extends 'MWSimpleCrudGeneratorBundle::layout.html.twig' %}" }}
+{{ "{% extends 'DavgavaCrudGeneratorBundle::layout.html.twig' %}" }}
 {% endblock extends %}
 
 {% block body %}
 {{ "{% block title %}" }}
-{{ "{{ parent() }} - {{ 'views.show.show'|trans({'%entity%': '" }}{{ entity }}{{ "'}, 'MWSimpleCrudGeneratorBundle') }}" }}
+{{ "{{ parent() }} - {{ 'views.show.show'|trans({'%entity%': '" }}{{ entity }}{{ "'}, 'DavgavaCrudGeneratorBundle') }}" }}
 {{ "{% endblock %}" }}
 
 {{ "{% block page %}" }}

@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace MWSimple\Bundle\CrudGeneratorBundle\Tests\Command;
+namespace Davgava\Bundle\CrudGeneratorBundle\Tests\Command;
 
 use Symfony\Component\Console\Tester\CommandTester;
-use MWSimple\Bundle\GeneratorBundle\Command\MWSimpleCrudCommand;
+use Davgava\Bundle\GeneratorBundle\Command\DavgavaCrudCommand;
 
-class MWSimpleCrudCommandTest extends GenerateCommandTest
+class DavgavaCrudCommandTest extends GenerateCommandTest
 {
     /**
      * @dataProvider getInteractiveCommandData

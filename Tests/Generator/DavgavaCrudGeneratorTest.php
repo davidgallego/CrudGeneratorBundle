@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace MWSimple\Bundle\CrudGeneratorBundle\Tests\Generator;
+namespace Davgava\Bundle\CrudGeneratorBundle\Tests\Generator;
 
-use MWSimple\Bundle\CrudGeneratorBundle\Generator\MWSimpleCrudGenerator;
+use Davgava\Bundle\CrudGeneratorBundle\Generator\DavgavaCrudGenerator;
 
-class MWSimpleCrudGeneratorTest extends GeneratorTest
+class DavgavaCrudGeneratorTest extends GeneratorTest
 {
     public function testGenerateYamlFull()
     {
