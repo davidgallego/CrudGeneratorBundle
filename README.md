@@ -1,6 +1,6 @@
 # CrudGeneratorBundle
 
-This bundle generates code cute you extending SensioGeneratorBundle using KnpPaginatorBundle and Boostrap Templates.
+This bundle generates code cute you extending SensioGeneratorBundle using KnpPaginatorBundle and Boostrap Templates an fosRestBundle.
 
 ## Installation
 
@@ -104,6 +104,7 @@ app/console assets:install
 ## Dependencies
 
 This bundle extends [SensioGeneratorBundle](https://github.com/sensio/SensioGeneratorBundle) and add a paginator using [KnpPaginatorBundle](https://github.com/KnpLabs/KnpPaginatorBundle) and filter using [LexikFormFilterBundle](https://github.com/lexik/LexikFormFilterBundle) .
+[fosRESTBundle] (https://github.com/FriendsOfSymfony/FOSRestBundle)
 
 ## Usage
 
@@ -113,9 +114,10 @@ Use following command from console:
 app/console davgava:generate:crud
 ```
 
-## Author
+## Authors
 
 Gonzalo Alonso - gonkpo@gmail.com
+David Gallego - gallego.david@gmail.com
 
 ## Bootstrap 3
 
