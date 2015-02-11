@@ -1,8 +1,8 @@
 {
-    "name": "mwsimple/crud-generator",
+    "name": "davidgallego/crud-generator",
     "description": "This bundle generates code cute for you",
     "keywords": ["crud", "generator", "bootstrap"],
-    "homepage": "https://github.com/MWSimple/CrudGeneratorBundle",
+    "homepage": "https://github.com/davidgallego/CrudGeneratorBundle",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
