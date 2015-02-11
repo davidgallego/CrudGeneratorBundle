@@ -3,16 +3,24 @@
 namespace {{ namespace }}\Controller{{ entity_namespace ? '\\' ~ entity_namespace : '' }};
 
 {% block use_statements %}
+use FOS\RestBundle\Util\Codes;
+
+use FOS\RestBundle\Controller\Annotations;
+use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Request\ParamFetcherInterface;
+use FOS\RestBundle\View\RouteRedirectView;
+
+use FOS\RestBundle\View\View;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+
+use Symfony\Component\Form\FormTypeInterface;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
+
 {% if 'new' in actions or 'edit' in actions or 'delete' in actions %}
 use Symfony\Component\HttpFoundation\Request;
 {%- endif %}
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-{% if 'annotation' == format -%}
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-{%- endif %}
 
 use {{ namespace }}\Entity\{{ entity }};
 {% if 'new' in actions or 'edit' in actions %}
@@ -23,7 +31,8 @@ use {{ namespace }}\Form\{{ entity }}FilterType;
 
 /**
 {% block phpdoc_class_header %}
- * {{ entity }} controller.
+ * {{ entity }} Rest controller.
+ * @package {{ namespace }}\Controller
  * @author Nombre Apellido <name@gmail.com>
 {% endblock phpdoc_class_header %}
  *
@@ -34,7 +43,7 @@ use {{ namespace }}\Form\{{ entity }}FilterType;
 {% endblock phpdoc_class_annotations %}
  */
 {% block class_definition %}
-class {{ entity_class }}Controller extends Controller
+class {{ entity_class }}Controller extends FOSRestController
 {% endblock class_definition %}
 {
 {% block class_body %}
